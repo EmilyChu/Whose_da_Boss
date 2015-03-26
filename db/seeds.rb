@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+names = %w(Su, James, Kyle, Katherine, Josh, Greg, John, Aaron, Katie, Mallory, Mischka, Emily, Alex, David, Rob, Matt, Juan)
+names.each do |n|
+  Player.create(name: n)
+end
