@@ -13,6 +13,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'leaderboard'
 gem 'kaminari'
 gem 'carrierwave'
+#gem "fog-aws"
 
 gem 'devise'
 gem 'figaro'
