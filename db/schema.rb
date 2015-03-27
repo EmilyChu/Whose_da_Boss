@@ -11,7 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150326172329) do
+ActiveRecord::Schema.define(version: 20150326213909) do
+
+  create_table "player_showdowns", force: :cascade do |t|
+    t.integer  "player_id"
+    t.integer  "showdown_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "players", force: :cascade do |t|
+    t.string   "name"
+    t.string   "avatar_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "showdowns", force: :cascade do |t|
+    t.string   "type"
+    t.integer  "winner_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
